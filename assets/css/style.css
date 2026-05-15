@@ -1,0 +1,139 @@
+/* --- Variables et Reset --- */
+:root {
+    --primary-color: #ef5350;
+    --background-color: #f6f6f6;
+    --card-background: #ffffff;
+    --text-color: #333333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding-bottom: 50px;
+}
+
+/* --- Header et Recherche --- */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+}
+
+#search-input {
+    width: 100%;
+    max-width: 400px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    outline: none;
+    transition: transform 0.2s;
+}
+
+#search-input:focus {
+    transform: scale(1.02);
+}
+
+/* --- Grille du Pokédex --- */
+.pokedex-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* --- Cartes Pokémon --- */
+.pokemon-card {
+    background-color: var(--card-background);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.pokemon-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.pokemon-id {
+    font-size: 0.85rem;
+    color: #888;
+    font-weight: bold;
+}
+
+.pokemon-image {
+    width: 120px;
+    height: 120px;
+    margin: 10px 0;
+}
+
+.pokemon-name {
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+}
+
+/* --- Badges de Types --- */
+.types-container {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.type-badge {
+    padding: 5px 12px;
+    border-radius: 20px;
+    color: white;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Couleurs par type (Quelques exemples principaux) */
+.type-grass { background-color: #78C850; }
+.type-fire { background-color: #F08030; }
+.type-water { background-color: #6890F0; }
+.type-bug { background-color: #A8B820; }
+.type-normal { background-color: #A8A878; }
+.type-poison { background-color: #A040A0; }
+.type-electric { background-color: #F8D030; }
+.type-ground { background-color: #E0C068; }
+.type-fairy { background-color: #EE99AC; }
+.type-fighting { background-color: #C03028; }
+.type-psychic { background-color: #F85888; }
+.type-rock { background-color: #B8A038; }
+.type-ghost { background-color: #705898; }
+.type-ice { background-color: #98D8D8; }
+.type-dragon { background-color: #7038F8; }
+
+/* --- États --- */
+.loading {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 50px;
+    color: #666;
+}
+
+.hidden {
+    display: none !important;
+}
