@@ -8,7 +8,8 @@
 - Données de l'API Pokémon ou fichier local
 
 ## Aperçu du Pokédex
-![Aperçu du Pokédex](assets/images/sortie.png)
+
+![image web](assets/images/sortie.png)
 
 ## Installation
 
